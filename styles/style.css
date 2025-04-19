@@ -1,6 +1,35 @@
 @charset "UTF-8";
+* {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: Poppins, sans-serif;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.bs-icon {
+  font-size: 2rem;
+  background-color: #0D6EFD;
+  color: #fff;
+  border-radius: 20%;
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-body {
+  text-align: center;
+}
+
 .hero {
-  background-image: url("/imgs/background.svg");
+  background-image: url("../imgs/background.svg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -19,19 +48,62 @@
   min-height: 100vh;
 }
 
+.features, .register, .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0A092D;
+}
+
+.register .card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+  margin: 2rem 0;
+}
+
+.register .card-body {
+  margin: 1.5rem;
+}
+
+.register form .mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+.register .d-grid {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  transition: transform 15s ease-in-out;
+  transform-origin: left;
+}
+
 .btn-primary:hover {
-  font-size: 1rem;
+  transform: scale(1.1);
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  transform: scale(1.1);
 }
 
-@media (max-width: 767px) {
-  .img-fluid {
-    max-width: 60% !important;
-    height: auto;
+.btn-primary {
+  transform-origin: center !important;
+}
+
+.about {
+  margin: 2rem 1rem;
+}
+
+.features .card, .login .card, .register .card {
+  margin: 1rem 0;
+}
+
+@media (max-width: 468px) {
+  .row-cols-2,
+  .row-cols-md-4 {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center;
   }
 }
 /*!
